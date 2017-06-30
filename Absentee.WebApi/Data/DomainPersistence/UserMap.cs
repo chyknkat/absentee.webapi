@@ -14,7 +14,7 @@ namespace Absentee.WebApi.Data.DomainPersistence
             Table("Absentee.User");
             LazyLoad();
 
-            Id(c => c.Id).GeneratedBy.Identity();
+            Id(c => c.Id).Column("Id").GeneratedBy.Identity();
             Map(c => c.FirstName).Column("FirstName").Not.Nullable();
             Map(c => c.LastName).Column("LastName").Nullable();
             Map(c => c.FullName).Column("FullName").Nullable();
