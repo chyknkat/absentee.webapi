@@ -18,7 +18,7 @@ namespace Absentee.WebApi.Data
 
         ICriteria QueryProjection<T>(Expression<Func<T, bool>> predicate, params string[] columns);
 
-        IEnumerable<T> GetAll<T>();
+        IList<T> GetAll<T>();
         T Get<T>(int id);
 
         void Save<T>(T entity);

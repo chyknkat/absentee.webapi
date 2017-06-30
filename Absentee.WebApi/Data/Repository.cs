@@ -44,7 +44,7 @@ namespace Absentee.WebApi.Data
             return queryDef;
         }
 
-        public IEnumerable<DomainEntity> GetAll<DomainEntity>()
+        public IList<DomainEntity> GetAll<DomainEntity>()
         {
             _session.CacheMode = CacheMode.Normal;
             return _session.Query<DomainEntity>().ToList();

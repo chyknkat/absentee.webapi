@@ -13,7 +13,7 @@ namespace Absentee.WebApi.Data.Domain
         public virtual string FullName { get; protected set; }
         public virtual Team Team { get; protected set; }
         public virtual bool IsActive { get; protected set; }
-        public IList<Absence> Absences { get; protected set; }
+        public virtual IList<Absence> Absences { get; protected set; }
 
         public User() { Absences = new List<Absence>(); }
 
