@@ -19,6 +19,7 @@ namespace Absentee.WebApi.Data.DomainPersistence
             Map(c => c.LastName).Column("LastName").Nullable();
             Map(c => c.FullName).Column("FullName").Nullable();
             Map(c => c.Team).Column("Team").Nullable();
+            Map(c => c.IsActive).Column("Active").Not.Nullable();
 
             HasMany(c => c.Absences).Inverse().LazyLoad();
         }

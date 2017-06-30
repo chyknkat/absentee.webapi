@@ -12,6 +12,7 @@ namespace Absentee.WebApi.Data.Domain
         public virtual string LastName { get; protected set; }
         public virtual string FullName { get; protected set; }
         public virtual Team Team { get; protected set; }
+        public virtual bool IsActive { get; protected set; }
         public IList<Absence> Absences { get; protected set; }
 
         public User() { Absences = new List<Absence>(); }
@@ -20,6 +21,7 @@ namespace Absentee.WebApi.Data.Domain
         {
             FirstName = firstName;
             Absences = new List<Absence>();
+            IsActive = true;
         }
 
         public User(string firstName, string lastName, Team team)
@@ -29,6 +31,7 @@ namespace Absentee.WebApi.Data.Domain
             FullName = $"{firstName} {lastName}";
             Team = team;
             Absences = new List<Absence>();
+            IsActive = true;
         }
 
         public virtual void SetName(string firstName, string lastName)
@@ -46,6 +49,11 @@ namespace Absentee.WebApi.Data.Domain
         public virtual void SetAbsences(IEnumerable<Absence> absences)
         {
             Absences.AddRange(absences);
+        }
+
+        public virtual void ToggleActiveFlag(bool isActive)
+        {
+            IsActive = isActive;
         }
     }
 
