@@ -11,7 +11,7 @@ namespace Absentee.WebApi.Data.DomainPersistence
     {
         public UserMap()
         {
-            Table("Absentee.User");
+            Table("Absentee.[User]");
             LazyLoad();
 
             Id(c => c.Id).Column("Id").GeneratedBy.Identity();

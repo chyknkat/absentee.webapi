@@ -21,7 +21,8 @@ namespace Absentee.WebApi.Data.DomainPersistence
             Map(c => c.Comments).Column("Comments").Nullable();
             Map(c => c.IsActive).Column("Active").Not.Nullable();
 
-            References(c => c.User).Column("UserId").ForeignKey("FK_Absence_ToUser").Not.Nullable();
+            References(c => c.User).Column("UserId").Not.Nullable();
+           
         }
     }
 }
