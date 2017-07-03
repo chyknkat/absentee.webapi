@@ -172,6 +172,7 @@
     <Compile Include="Bootstrapper\Bootstrapper.cs" />
     <Compile Include="Bootstrapper\SimpleInjectorWebApiInitializer.cs" />
     <Compile Include="Controllers\AbsenceController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Data\DomainPersistence\AbsenceMap.cs" />
     <Compile Include="Data\DomainPersistence\UserMap.cs" />
     <Compile Include="Data\Domain\Absence.cs" />
