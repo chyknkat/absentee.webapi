@@ -69,7 +69,7 @@ namespace Absentee.WebApi.Controllers
         }
 
         [Route("Update")]
-        [HttpPost]
+        [HttpPut]
         public virtual HttpResponseMessage UpdateUser(UserDto user)
         {
             try
@@ -93,7 +93,7 @@ namespace Absentee.WebApi.Controllers
         }
 
         [Route("ToggleActive/{userId:int}/{isActive:bool}")]
-        [HttpPost]
+        [HttpPut]
         public virtual HttpResponseMessage ToggleActiveFlag(int userId, bool isActive)
         {
             try
