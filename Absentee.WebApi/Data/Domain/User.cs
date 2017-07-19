@@ -61,6 +61,7 @@ namespace Absentee.WebApi.Data.Domain
     {
         NoTeam = 0,
         External = 1,
-        Internal = 2
+        Internal = 2,
+        IT = 3
     }
 }

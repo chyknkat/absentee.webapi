@@ -34,7 +34,7 @@ namespace Absentee.WebApi.Controllers
                 usersDto.Add(userDto);
             }
 
-            return usersDto.ToArray();
+            return usersDto.OrderBy(u => u.FullName).ToArray();
         }
 
         [Route("GetById/{userId:int}")]
